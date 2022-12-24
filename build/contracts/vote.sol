@@ -4,8 +4,8 @@ pragma solidity >=0.7.0 <0.9.0;
 
 contract vote{
     string public winner;
-    address public  participant1 =0xda8Dd222A31a092363eC06bBDBB61B99858d8880;
-    address public  participant2 = 0xe886856f3Bc225c27f85FFcCCF4BB11DCE3BaBF7;
+    address public  participant1 =0xa6B91Ab24F8D976A5f2119f5Dd7ed8886f8b2C03;
+    address public  participant2 = 0x7719E64418C13c3Ab97e6f8500E81ce1101e8C40;
     mapping(address=>uint) user;
     mapping(address=>bool) chek;
 
