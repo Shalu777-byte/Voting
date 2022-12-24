@@ -120,7 +120,7 @@ let contract = new web3.eth.Contract(
     }
   ],
 
-"0x8128823f35BB034a917f210b63FbA26D94DCD1C6"
+"0xF62e286834574a8DC7fc6B5A2239DC726C1A63D3"
 );
    async function  account(){
        accounts = await web3.eth.requestAccounts();
@@ -130,7 +130,8 @@ let contract = new web3.eth.Contract(
 
     $("#btn1").click(async function(){
         accounts1 = await web3.eth.requestAccounts();
-        contract.methods.participant1_vote().send({from:String(accounts1),gas:21000},function(err,res){
+
+        contract.methods.participant1_vote().send({from:String(accounts1)},function(err,res){
             if(err){
                 console.log("error"+err);
             }
@@ -142,7 +143,7 @@ let contract = new web3.eth.Contract(
 
     $("#btn2").click(async function(){
         accounts2 = await web3.eth.requestAccounts();
-        contract.methods.participant2_vote().send({from: String(accounts2),gas:21000},function(err,res){
+        contract.methods.participant2_vote().send({from: String(accounts2)},function(err,res){
             if(err){
                 console.log("error"+err);
             }
@@ -154,7 +155,7 @@ let contract = new web3.eth.Contract(
 
        $("#res").click(async function() {
     console.log(owner_address);
-           await contract.methods.declare_winner().send({from:"0xcd10bE7B6a441B59CA8485a3ad330a309D073434"},function(err,res){
+           await contract.methods.declare_winner().send({from:""},function(err,res){
                  if(err){
                      alert("U r not the owner");
                  }
